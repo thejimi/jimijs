@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .dark {
+            color:white;
+            background-color:black
+        }
+
+        .ul2 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+        <head>
+            <link rel="icon" href="../files/nice-cat.gif" type="image/gif" >
+            <title>jimijs - me</title>
+
+            <meta property="og:title" content="jimijs" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="files/nice-cat.gif" />
+<meta name="theme-color" content="#441100">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        </head>
+    <body onmouseover="play()" onclick="play()" class="dark">
+        <h1 id="text">Hello there! 👋 Im Jimi and this is my epic website!</h1>
+        <h2>If you are a psychopath, you can use <button onclick='toggle()'>this button</button> to make everything white mode.</h2>
+        <h3>Navigation</h3>
+        <ul class="ul2">
+            <li><button onclick="window.location.href = ('https://jimijs.pl/modern')">Modern version</button></li>
+            <li><button onclick="window.location.href = ('mailto:jimmy@pocz.pl')">E-Mail me!</button></li>
+        </ul>
+        <br>
+        <h3>Something about me:</h3>
+        <ol>
+            <li>I am a fullstack developer</li>
+            <li>Im a dumbass</li>
+            <li>Im from Poland</li>
+            <li>I hate mushrooms so much</li>
+            <li>I actually know how to style a website, i just like this nostalgic look of old web!</li>
+        </ol>
+        <br>
+        <h3>Things ive done:</h3>
+        <p>This is a list of things i have programmed and im proud of.</p>
+        <ul>
+            <li><a target="_blank" href="https://discord.com/oauth2/authorize?client_id=1009473107335061544&permissions=275683724400&redirect_uri=https%3A%2F%2Fautomemes.qsn.pl%2Fadded&response_type=code&scope=guilds%20bot%20applications.commands">AutoMemes</a> - A bot that automatically shitposts in your Discord server.</li>
+            <li><a target="_blank" href="https://github.com/thejimi/sexbot">sexbot</a> - Bad AI made as a joke for a Discord bot.</li>
+            <li><a target="_blank" href="http://flappy.qsn.pl/">Flappy Shit</a> - A shitty flappy bird clone made in pure HTML/JS/CSS using canvas.</li>
+        </ul>
+        <br>
+        <h3>My pretty super awesome dog:</h3>
+        <p>His name is gregor :)</p>
+        <img style='width:500px;height:300px' src="https://media.discordapp.net/attachments/1051173700793278625/1052624023810474024/F168E1D0-FB58-4D9E-B08D-F3B7466190A8.jpg?width=504&height=672">
+        <br>
+        <h2 id="end">And thats everything! I hope life is going good on the place where ur at. Bye!</h2>
+        <audio style="display:none" id="foobar" src="../files/elevator.mp3" preload="auto"> 
+    </body>
+    <script>
+        
+        fetch('http://ip-api.com/json')
+        .then((response) => response.json())
+        .then((data) => {
+            document.getElementById("text").innerHTML = (`Hello ${data.query} from ${data.country}! 👋 Im Jimi and this is my epic website!`)
+            document.getElementById("end").innerHTML = (`And thats everything! I hope life is going good on ${data.lat} ${data.lon}. Bye!`)
+        });
+
+        function toggle(){
+            document.body.classList.toggle("dark")
+        }
+
+        setInterval(() => {
+            if(document.title === 'jimijs ^_~ - me'){
+                document.title = 'jimijs ~_^ - me'
+            } else {
+                document.title = 'jimijs ^_~ - me'
+            }
+        }, 500);
+
+        var sample = document.getElementById("foobar");
+        
+        function play(){
+            sample.play();
+        }
+
+        setTimeout(() => {
+            sample.play();
+         }, 1000);
+        
+    </script>
+</html>

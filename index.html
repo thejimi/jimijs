@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href="files/home.css">
+
+        <link rel="icon" href="files/nice-cat.gif" type="image/gif" >
+        <title>jimijs</title>
+
+        
+
+<meta property="og:title" content="jimijs" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="files/nice-cat.gif" />
+<meta name="theme-color" content="#441100">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    </head>
+    <body>
+        <div id="image">
+            <div id="top">
+                <div id="sky"></div>
+            </div>
+            <div id="bottom">
+                <div id="ground"></div>
+            </div>
+            <div id="text">
+                <h1>jimijs</h1>
+                <h2><a style="text-decoration: none;color:white;cursor:pointer" onclick="home()">click</a></h2>
+            </div>
+            <audio style="display:none" id="foobar" src="files/audio.mp3" preload="auto"> 
+        </div>
+    </body>
+    <script>
+        var sample = document.getElementById("foobar");
+        
+        setTimeout(() => {
+            sample.play();
+         }, 1000);
+
+        function home(){
+            var element = document.getElementById("image");
+            element.classList.add("hidden");
+
+            setTimeout(() => {
+                window.location.href = ('./me')
+            }, 700);
+        }
+
+        setInterval(() => {
+            if(document.title === 'jimijs ^_~'){
+                document.title = 'jimijs ~_^'
+            } else {
+                document.title = 'jimijs ^_~'
+            }
+        }, 500);
+    </script>
+</html>
